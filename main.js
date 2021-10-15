@@ -14,3 +14,4 @@ const createNewElement = () => {
 createButton.addEventListener("click", createNewElement);
 
 // export
+export default createNewElement;
