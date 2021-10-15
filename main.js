@@ -1,5 +1,6 @@
 import Img from "./Img-component.js";
 import Button from "./Button-component.js";
+import Paragraph from "./P-component.js";
 
 const containerDiv = document.querySelector(".container");
 
@@ -24,5 +25,16 @@ const createNewButton = () => {
 
 const buttonButton = document.querySelector(".button-button");
 buttonButton.addEventListener("click", createNewButton);
+
+// paragraph
+const createNewParagraph = () => {
+  // get user input
+  const userInput = document.querySelector(".paragraph-input").value;
+  // create component
+  new Paragraph(containerDiv, userInput);
+};
+
+const paragraphButton = document.querySelector(".paragraph-button");
+paragraphButton.addEventListener("click", createNewParagraph);
 
 export default createNewImg;
