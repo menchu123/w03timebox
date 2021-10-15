@@ -2,11 +2,15 @@ const containerDiv = document.querySelector(".container");
 
 const createButton = document.querySelector("button");
 
-createButton.addEventListener("click", () => {
+const createNewElement = () => {
   // get user input
   const userInput = document.querySelector("input").value;
   const newElement = document.createElement(userInput);
 
+  // create element
   containerDiv.appendChild(newElement);
-});
-// create element
+};
+
+createButton.addEventListener("click", createNewElement);
+
+// export
