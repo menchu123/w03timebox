@@ -1,17 +1,15 @@
-import Component from "./Component.js";
+import Img from "./Img-component.js";
 
 const containerDiv = document.querySelector(".container");
 
-const createButton = document.querySelector("button");
-
-const createNewElement = () => {
+const createNewImg = () => {
   // get user input
-  const userInput = document.querySelector("input").value;
-
-  new Component(containerDiv, userInput);
+  const userInput = document.querySelector(".image-input").value;
+  // create component
+  new Img(containerDiv, userInput);
 };
 
-createButton.addEventListener("click", createNewElement);
+const imageButton = document.querySelector(".image-button");
+imageButton.addEventListener("click", createNewImg);
 
-// export
-export default createNewElement;
+export default createNewImg;

@@ -17,5 +17,7 @@ module.exports = {
     "no-console": "off",
     "import/extensions": "off",
     "lines-between-class-members": "off",
+    "no-new": "off",
+    "no-named-as-default": "off;",
   },
 };
