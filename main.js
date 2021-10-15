@@ -1,3 +1,5 @@
+import Component from "./Component.js";
+
 const containerDiv = document.querySelector(".container");
 
 const createButton = document.querySelector("button");
@@ -5,10 +7,8 @@ const createButton = document.querySelector("button");
 const createNewElement = () => {
   // get user input
   const userInput = document.querySelector("input").value;
-  const newElement = document.createElement(userInput);
 
-  // create element
-  containerDiv.appendChild(newElement);
+  new Component(containerDiv, userInput);
 };
 
 createButton.addEventListener("click", createNewElement);
